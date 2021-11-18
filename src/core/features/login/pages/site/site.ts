@@ -78,9 +78,9 @@ export class CoreLoginSitePage implements OnInit {
             displayurl: true,
             ...siteFinderSettings,
         };
-
+        
         // Load fixed sites if they're set.
-        if (CoreLoginHelper.hasSeveralFixedSites()) {
+        if (CoreLoginHelper.isFixedUrlSet() || CoreLoginHelper.hasSeveralFixedSites()) {
             url = this.initSiteSelector();
         } else if (CoreConstants.CONFIG.enableonboarding && !CoreApp.isIOS()) {
             this.initOnboarding();

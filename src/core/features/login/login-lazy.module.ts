@@ -23,7 +23,8 @@ const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'sites',
+        redirectTo: 'site',
+        // TODO: Redirect this to the login page with preloaded values somehow
     },
     {
         path: 'site',
